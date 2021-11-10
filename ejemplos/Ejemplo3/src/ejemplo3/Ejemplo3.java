@@ -12,6 +12,9 @@ siguiente texto; Estudiante reprobado con un promedio: ?
  */
 package ejemplo3;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 /**
  *
  * @author reroes
@@ -20,13 +23,18 @@ public class Ejemplo3 {
 
     public static void main(String[] args) {
         // Condicionales aninados
+        Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.US);
+        System.out.println("Ingrese el promedio");
+        double promedio;
+        
         double promedio = 10;
 
         if (promedio >= 7.5) {
             System.out.printf("Estudiante aprobado con un "
                     + "promedio: %.2f\n", promedio);
         } else {
-            if ((promedio >= 5) && (promedio <= 7.4)) {
+            if ((promedio >= 5) && (promedio <= 7.5)) {
                 System.out.printf("Estudiante en suspenso con un "
                         + "promedio: %.2f\n", promedio);
             } else {

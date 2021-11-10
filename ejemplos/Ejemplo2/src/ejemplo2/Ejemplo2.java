@@ -10,6 +10,9 @@
  */
 package ejemplo2;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 /**
  *
  * @author reroes
@@ -20,8 +23,11 @@ public class Ejemplo2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // Condicionale compuestos
-        double promedio = 7.4;
+        // Condicionales compuestos
+        Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.US);
+        String promedio;
+        System.out.println("Ingrese el promedio por favor");
 
         if (promedio >= 7.5) {
             System.out.printf("Estudiante aprobado con un "
